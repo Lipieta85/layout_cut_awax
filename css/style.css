@@ -282,7 +282,6 @@ body {
 .container {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
   padding: 0;
 }
 
@@ -291,90 +290,95 @@ header {
   height: 850px;
   background-image: url("../images/tlo_header.jpg");
   position: relative;
+  background-size: cover;
 }
 
-header .pasek-gora {
+header .container {
+  overflow: hidden;
+}
+
+header .container .pasek-gora {
   background-color: black;
-  width: 100%;
   height: 14vh;
   position: relative;
+  width: 100%;
 }
 
-header .pasek-gora .logo {
+header .container .pasek-gora .logo {
   top: 20px;
-  left: 227px;
+  left: 15vw;
   position: absolute;
 }
 
-header .pasek-gora nav {
+header .container .pasek-gora nav {
   position: absolute;
-  left: 25vw;
   top: 5vh;
 }
 
-header .pasek-gora nav ul {
+header .container .pasek-gora nav ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
-header .pasek-gora nav ul li {
+header .container .pasek-gora nav ul li {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 11px;
-  left: 25vw;
-  padding-right: 14px;
+  left: 20vw;
+  padding-right: 1vw;
 }
 
-header .pasek-gora nav ul li a {
+header .container .pasek-gora nav ul li a {
+  padding: 0 3px 5.9vh 3px;
   color: #FFF;
   text-decoration: none;
 }
 
-header .pasek-gora nav ul li a:hover {
-  padding-bottom: 5.9vh;
+header .container .pasek-gora nav ul li a:hover {
   border-bottom: 3px solid #b88b58;
 }
 
-header .header-text {
+header .container .header-text {
   text-align: center;
   padding-top: 260px;
 }
 
-header .header-text .napis-gora {
+header .container .header-text .napis-gora {
   font-size: 50px;
   color: #FFF;
 }
 
-header .header-text .napis-gora p {
+header .container .header-text .napis-gora p {
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
 }
 
-header .header-text .napis-srodek {
+header .container .header-text .napis-srodek {
   font-size: 50px;
   color: #b88b58;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-header .header-text .napis-srodek p {
+header .container .header-text .napis-srodek p {
   margin-bottom: 10px;
 }
 
-header .header-text .napis-dol {
+header .container .header-text .napis-dol {
   font-size: 20px;
   color: #FFF;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-header .header-text .napis-dol p {
+header .container .header-text .napis-dol p {
   margin-top: 10px;
   margin-bottom: 70px;
 }
 
-header .header-text .header-button .button {
+header .container .header-text .header-button .button {
   text-decoration: none;
   padding: 15px 65px 15px 65px;
   background-color: #b88b58;
@@ -386,15 +390,16 @@ header .header-text .header-button .button {
   border-radius: 20px;
 }
 
-header .header-text .header-button .button:hover {
-  background-color: red;
+header .container .header-text .header-button .button:hover {
+  background-color: black;
+  border: 1px solid #FFF;
 }
 
-header .pagedots {
+header .container .pagedots {
   text-align: center;
 }
 
-header .pagedots .dot {
+header .container .pagedots .dot {
   height: 10px;
   width: 10px;
   background-color: none;
@@ -404,13 +409,103 @@ header .pagedots .dot {
   margin-top: 170px;
 }
 
-header .pagedots .dot:hover {
+header .container .pagedots .dot:hover {
   background-color: #b88b58;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* HEADER */
+  header {
+    height: auto;
+  }
+  header .container .pasek-gora {
+    height: 400px;
+  }
+  header .container .pasek-gora .logo {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  header .container .pasek-gora nav {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding-top: 30px;
+  }
+  header .container .pasek-gora nav ul {
+    padding: 0;
+  }
+  header .container .pasek-gora nav ul li {
+    display: block;
+    left: 0;
+    padding: 8px;
+  }
+  header .container .pasek-gora nav ul li a {
+    padding: 0 3px 3px 3px;
+  }
+  header .pagedots .dot {
+    margin-top: 140px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    height: auto;
+  }
+  header .container .pasek-gora {
+    height: 400px;
+  }
+  header .container .pasek-gora .logo {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  header .container .pasek-gora nav {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding-top: 30px;
+  }
+  header .container .pasek-gora nav ul {
+    padding: 0;
+  }
+  header .container .pasek-gora nav ul li {
+    display: block;
+    left: 0;
+    padding: 8px;
+  }
+  header .container .pasek-gora nav ul li a {
+    padding: 0 3px 3px 3px;
+  }
+  header .container .header-text {
+    padding-top: 130px;
+  }
+  header .container .header-text .napis-gora {
+    font-size: 30px;
+  }
+  header .container .header-text .napis-srodek {
+    font-size: 30px;
+  }
+  header .container .pagedots .dot {
+    margin-top: 140px;
+    margin-bottom: 30px;
+  }
 }
 
 /* SECTION ABOUT US */
 .about {
   margin: 63px 120px 63px 120px;
+}
+
+.about .telephone {
+  position: fixed;
+  left: 90vw;
+  top: 550px;
+}
+
+.about .telephone img {
+  border-radius: 50%;
 }
 
 .about .about-header {
@@ -450,12 +545,36 @@ header .pagedots .dot:hover {
 }
 
 .about .about-content-button .button:hover {
-  background-color: red;
+  background-color: #b4b4b4;
 }
 
 .about .about-content .picture {
-  width: 445px;
   box-shadow: 0 10px 18px 5px rgba(0, 0, 0, 0.25);
+}
+
+.about .about-content .picture img {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about {
+    margin: 63px 20px 63px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    text-align: center;
+    margin: 63px 20px 63px 20px;
+  }
+  .about .telephone {
+    left: 80vw;
+    top: 600px;
+  }
+  .about .telephone img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 /* SECTION SERVICES */
@@ -518,6 +637,60 @@ header .pagedots .dot:hover {
 
 .services .services-content .service-provide .service-text4 {
   padding-left: 2px;
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  /* SECTION SERVICES */
+  .services {
+    padding: 63px 0 63px 0;
+  }
+  .services .services-content {
+    display: flex;
+    justify-content: center;
+  }
+  .services .services-content .services-border {
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* SECTION SERVICES */
+  .services {
+    padding: 63px 164px 63px 164px;
+  }
+  .services .services-content {
+    display: flex;
+    justify-content: center;
+  }
+  .services .services-content .services-border {
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* SECTION SERVICES */
+  .services {
+    padding: 63px 100px 63px 100px;
+  }
+  .services .services-content {
+    display: flex;
+    justify-content: center;
+  }
+  .services .services-content .services-border {
+    border-left: none;
+  }
+  .services .services-content .service-provide {
+    width: 220px;
+  }
+  .services .services-content .service-provide .service-text1 {
+    padding-left: 0;
+  }
+  .services .services-content .service-provide .service-text2 {
+    padding-left: 0;
+  }
+  .services .services-content .service-provide .service-text4 {
+    padding-left: 0;
+  }
 }
 
 /* SECTION PROJECTS */
@@ -632,14 +805,33 @@ header .pagedots .dot:hover {
 }
 
 .projects .projects-content .projects-content-button .button:hover {
-  background-color: red;
+  background-color: #b4b4b4;
+}
+
+@media (max-width: 767px) {
+  .projects {
+    padding: 62px 20px 62px 20px;
+  }
+  .projects .projects-content .projects-list {
+    height: auto;
+    width: 115px;
+  }
+  .projects .projects-content .projects-list ul .list-border {
+    border: none;
+  }
+  .projects .projects-content .projects-list ul li {
+    display: block;
+    font-size: 9px;
+  }
 }
 
 /* SECTION TEAM */
 .team {
   padding: 62px 120px 62px 120px;
   background-image: url("../images/tlo-team.jpg");
-  height: 700px;
+  height: auto;
+  background-size: cover;
+  width: 100%;
 }
 
 .team .team-header {
@@ -666,6 +858,7 @@ header .pagedots .dot:hover {
 }
 
 .team .team-content .member {
+  margin-bottom: 10px;
   height: 430px;
   width: 350px;
   background-color: #FFF;
@@ -701,7 +894,7 @@ header .pagedots .dot:hover {
 }
 
 .team .team-content .member .social-media .icons:hover {
-  background-color: red;
+  background-color: #b88b58;
 }
 
 .team .pagedots {
@@ -784,15 +977,30 @@ header .pagedots .dot:hover {
   background-color: #b88b58;
 }
 
+@media (max-width: 767px) {
+  .clients {
+    padding: 62px 100px 62px 100px;
+  }
+}
+
 /* SECTION LOGOS */
 .logos {
-  padding: 62px 120px 62px 120px;
+  margin: 62px 120px 62px 120px;
 }
 
 .logos .graphics {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+@media (max-width: 767px) {
+  .logos {
+    margin: 62px 30px 62px 30px;
+  }
+  .logos .graphics img {
+    padding: 10px;
+  }
 }
 
 /* SECTION PRICE */
@@ -826,6 +1034,7 @@ header .pagedots .dot:hover {
 .price .price-content .card {
   width: 255px;
   height: 340px;
+  margin-bottom: 10px;
   background-color: #FFF;
 }
 
@@ -900,12 +1109,12 @@ header .pagedots .dot:hover {
 }
 
 .price .price-content .card .card-button .button:hover {
-  background-color: red;
+  background-color: #b4b4b4;
 }
 
 /* SECTION PREMIUM */
 .premium {
-  padding: 62px 160px 62px 160px;
+  margin: 62px 160px 62px 160px;
 }
 
 .premium .premium-header {
@@ -925,6 +1134,11 @@ header .pagedots .dot:hover {
 
 .premium .premium-content {
   padding-top: 50px;
+}
+
+.premium .premium-content .book img {
+  width: 100%;
+  position: relative;
 }
 
 .premium .premium-content .box-features {
@@ -993,7 +1207,13 @@ header .pagedots .dot:hover {
 }
 
 .premium .premium-button .button:hover {
-  background-color: red;
+  background-color: #b4b4b4;
+}
+
+@media (max-width: 767px) {
+  .premium {
+    margin: 62px 30px 62px 30px;
+  }
 }
 
 /* SECTION FACTS */
@@ -1056,6 +1276,12 @@ header .pagedots .dot:hover {
   padding: 20px;
   font-size: 12px;
   color: #b4b4b4;
+}
+
+@media (max-width: 767px) {
+  .facts {
+    padding: 62px 20px 62px 20px;
+  }
 }
 
 /* SECTION TELL ABOUT US */
@@ -1121,8 +1347,11 @@ header .pagedots .dot:hover {
   font-size: 16px;
 }
 
-.tell .content .media:hover {
-  background-color: red;
+@media (max-width: 767px) {
+  /* SECTION TELL ABOUT US */
+  .tell {
+    width: 90%;
+  }
 }
 
 /* SECTION CONTACT */
@@ -1225,7 +1454,23 @@ header .pagedots .dot:hover {
 }
 
 .contact .contact-button input[type="submit"]:hover {
-  background-color: red;
+  background-color: #b4b4b4;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 62px 5px 62px 5px;
+  }
+  .contact form {
+    width: 80%;
+  }
+  .contact form .two-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact form .two-form .name-email input {
+    width: 95%;
+  }
 }
 
 /* SECTION MAP */
@@ -1233,74 +1478,107 @@ header .pagedots .dot:hover {
   background-image: url("../images/map_obraz_1.jpg");
   position: relative;
   height: 416px;
+  width: 100%;
 }
 
-.card-adres {
+.map .card-container .card-adres {
+  margin-top: 40px;
+  margin-left: 10vw;
   height: 340px;
-  width: 540px;
+  max-width: 540px;
+  width: 100%;
   background-color: #FFF;
-  margin-top: 35px;
-  margin-left: 245px;
   display: flex;
   flex-direction: column;
 }
 
-.card-adres .adres-content {
+.map .card-container .card-adres .adres-content {
   padding: 50px 0 50px 30px;
 }
 
-.card-adres .adres-content .adres {
+.map .card-container .card-adres .adres-content .adres {
   padding: 5px;
 }
 
-.card-adres .adres-content .adres span {
+.map .card-container .card-adres .adres-content .adres span {
   padding-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .map .card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .map .card-container .card-adres {
+    margin: 30px 10px 30px 10px;
+  }
 }
 
 /* SECTION FOOTER */
 .footer {
   background-color: black;
-  padding: 12px 120px 12px 120px;
 }
 
-.footer .icons {
+.footer .cursor {
+  margin-top: -27px;
+  margin-left: 3vw;
+  position: absolute;
+  padding: 5px;
+}
+
+.footer .cursor img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.footer .footcontent {
+  margin: 35px 120px 35px 120px;
+  display: flex;
+}
+
+.footer .footcontent .icons {
   background-color: #373737;
   width: 33px;
   height: 33px;
-  padding: 6px;
+  padding: 8px;
   border-radius: 100%;
   color: #FFF;
-  font-size: 16px;
 }
 
-.footer .icons:hover {
-  background-color: red;
+.footer .footcontent .icons:hover {
+  background-color: #b88b58;
 }
 
-.footer .napis {
-  padding-top: 135px;
+.footer .footcontent .napis {
+  padding-top: 130px;
   color: #FFF;
   font-weight: 600;
 }
 
-.footer .end-text {
+.footer .footcontent .end-text {
+  padding: 6px 16px 16px 16px;
   color: #b4b4b4;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 11px;
+  line-height: 1.9;
+  margin-right: 12px;
+  font-weight: 600;
 }
 
-.footer .end-form {
+.footer .footcontent .end-form {
+  margin-top: 7px;
   background-color: #373737;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 195px;
 }
 
-.footer .end-form .email {
+.footer .footcontent .end-form .email {
   padding-top: 40px;
   text-align: center;
 }
 
-.footer .end-form .email input {
+.footer .footcontent .end-form .email input {
   width: 60%;
   background-color: #373737;
   border-top: none;
@@ -1313,17 +1591,17 @@ header .pagedots .dot:hover {
   color: #b4b4b4;
 }
 
-.footer .end-form .email input::placeholder {
+.footer .footcontent .end-form .email input::placeholder {
   text-align: center;
 }
 
-.footer .end-form .end-button {
+.footer .footcontent .end-form .end-button {
   padding-top: 25px;
   padding-bottom: 50px;
   text-align: center;
 }
 
-.footer .end-form .end-button input[type="submit"] {
+.footer .footcontent .end-form .end-button input[type="submit"] {
   text-decoration: none;
   padding: 15px 60px 15px 60px;
   background-color: #b88b58;
@@ -1335,174 +1613,51 @@ header .pagedots .dot:hover {
   border-radius: 20px;
 }
 
-.footer .end-form .end-button input[type="submit"]:hover {
-  background-color: red;
+.footer .footcontent .end-form .end-button input[type="submit"]:hover {
+  background-color: black;
+  border: 1px solid #FFF;
 }
 
-@media (min-width: 991px) and (max-width: 1200px) {
-  /* SECTION SERVICES */
-  .services {
-    padding: 63px 0 63px 0;
-  }
-  .services .services-content .services-border {
-    border: none;
+@media (min-width: 991px) and (max-width: 1199px) {
+  .footer .footcontent {
+    margin: 12px 25px 12px 0;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* HEADER */
-  header .pasek-gora .logo {
-    top: 20px;
-    left: 100px;
-    position: absolute;
+  .footer .footcontent {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 12px 25px 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
   }
-  /* SECTION SERVICES */
-  .services .services-content .services-border {
-    border: none;
-  }
-  .services .services-content .service-provide .service-text1 {
-    padding-left: 0;
-  }
-  .services .services-content .service-provide .service-text2 {
-    padding-left: 0;
-  }
-  .services .services-content .service-provide .service-text4 {
-    padding-left: 0;
+  .footer .footcontent .napis {
+    padding-top: 35px;
   }
 }
 
 @media (max-width: 767px) {
-  header {
-    height: 1000px;
+  .footer .footcontent {
+    margin: 12px 100px 12px 100px;
+    padding: 30px 50px 30px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
-  header .pasek-gora {
-    height: 55vh;
-  }
-  header .pasek-gora .logo {
-    left: 60px;
-  }
-  header .pasek-gora nav {
-    position: absolute;
-    left: 35vw;
-    top: 5vh;
-  }
-  header .pasek-gora nav ul li {
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 11px;
-    left: 25vw;
-    padding: 8px;
-  }
-  header .header-text {
-    padding-top: 150px;
-  }
-  header .header-text .napis-gora {
-    font-size: 40px;
-  }
-  header .header-text .napis-srodek {
-    font-size: 40px;
-  }
-  /* SECTION ABOUT US */
-  .about {
-    margin: 63px 20px 63px 20px;
-  }
-  /* SECTION SERVICES */
-  .services .services-content .services-border {
-    border-left: none;
-  }
-  .services .services-content .service-provide {
-    width: 220px;
-  }
-  .services .services-content .service-provide .service-text1 {
-    padding-left: 0;
-  }
-  .services .services-content .service-provide .service-text2 {
-    padding-left: 0;
-  }
-  .services .services-content .service-provide .service-text4 {
-    padding-left: 0;
-  }
-  /* SECTION PROJECTS */
-  .projects {
-    padding: 62px 20px 62px 20px;
-  }
-  .projects .projects-content .projects-list {
-    height: auto;
-    width: 115px;
-  }
-  .projects .projects-content .projects-list ul .list-border {
-    border: none;
-  }
-  .projects .projects-content .projects-list ul li {
-    display: block;
-    font-size: 9px;
-  }
-  /* SECTION TEAM */
-  .team {
-    height: auto;
-  }
-  /* SECTION CLIENTS */
-  .clients {
-    padding: 62px 100px 62px 100px;
-  }
-  /* SECTION LOGOS */
-  .logos {
-    padding: 62px 20px 62px 20px;
-  }
-  .logos .graphics img {
-    padding: 10px;
-  }
-  /* SECTION PREMIUM */
-  .premium {
-    padding: 62px 40px 62px 40px;
-  }
-  /* SECTION FACTS */
-  .facts {
-    padding: 62px 20px 62px 20px;
-  }
-  /* SECTION TELL ABOUT US */
-  .tell {
-    width: 90%;
-  }
-  /* SECTION CONTACT */
-  .contact {
-    padding: 62px 5px 62px 5px;
-  }
-  .contact form {
-    width: 80%;
-  }
-  /* SECTION MAP */
-  .map {
-    background-image: url("../images/map_obraz_1.jpg");
-    position: relative;
-    height: 416px;
-  }
-  .card-adres {
-    height: 340px;
-    width: 300px;
-    margin-left: 20vw;
-  }
-  .card-adres .adres-ontent {
-    padding: 50px 0 50px 30px;
-  }
-  .card-adres .adres-ontent .adres span {
-    padding-left: 0px;
-  }
-  /* SECTION FOOTER */
-  .footer {
-    padding: 12px 50px 12px 80px;
-  }
-  .footer .napis {
+  .footer .footcontent .napis {
     padding-top: 35px;
   }
-  .footer .end-form {
-    background-color: #373737;
-    margin-left: 10px;
-    width: 350px;
-    height: 195px;
-  }
-  .footer .end-form .email input {
+  .footer .footcontent .end-form .email input {
     width: 60%;
   }
 }

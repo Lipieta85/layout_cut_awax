@@ -4,6 +4,7 @@ $secondary-color: #FFF;
 $third-color: #b4b4b4;
 $fourth-color: red;
 $fifth-color: black;
+$six-color: #948c8c;
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -16,8 +17,7 @@ body {
 .container {
     max-width: 1600px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0;
+    padding : 0;
 }
 
 /* HEADER */
@@ -26,99 +26,192 @@ header {
     height: 850px;
     background-image: url("../images/tlo_header.jpg");
     position: relative;
-    .pasek-gora {
-        background-color: $fifth-color;
-        width: 100%;
-        height: 14vh;
-        position: relative;
-        .logo {
-            top: 20px;
-            left: 227px;
-            position: absolute;
-        }
-        nav {
-            position: absolute;
-            left: 25vw;
-            top: 5vh;
-            ul {
-                list-style-type: none;
-                li {
-                    display: inline-block;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 11px;
-                    left: 25vw;
-                    padding-right: 14px;
-                    a {
-                        color: $secondary-color;
-                        text-decoration: none;
-                        &:hover {
-                            padding-bottom: 5.9vh;
-                            border-bottom: 3px solid $primary-color;
+    background-size: cover;
+    .container {
+        overflow: hidden;
+        .pasek-gora {
+            background-color: $fifth-color;
+            height: 14vh;
+            position: relative;
+            width: 100%;
+            .logo {
+                top: 20px;
+                left: 15vw;
+                position: absolute;
+            }
+            nav {
+                position: absolute;
+                top: 5vh;
+                ul {
+                    list-style-type: none;
+                    padding-left: 0;
+                    li {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 11px;
+                        left: 20vw;
+                        padding-right: 1vw;
+                        a {
+                            padding: 0 3px 5.9vh 3px;
+                            color: $secondary-color;
+                            text-decoration: none;
+                            &:hover {
+                                border-bottom: 3px solid $primary-color;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    .header-text {
-        text-align: center;
-        padding-top: 260px;
-        .napis-gora {
-            font-size: 50px;
-            color: $secondary-color;
-            p {
+        .header-text {
+            text-align: center;
+            padding-top: 260px;
+            .napis-gora {
+                font-size: 50px;
+                color: $secondary-color;
+                p {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+            .napis-srodek {
+                font-size: 50px;
+                color: $primary-color;
                 text-transform: uppercase;
                 font-weight: bold;
-                margin: 0;
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+            .napis-dol {
+                font-size: 20px;
+                color: $secondary-color;
+                text-transform: uppercase;
+                font-weight: bold;
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 70px;
+                }
+            }
+            .header-button .button {
+                text-decoration: none;
+                padding: 15px 65px 15px 65px;
+                background-color: $primary-color;
+                font-size: 13px;
+                color: $secondary-color;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-style: none;
+                border-radius: 20px;
+                &:hover {
+                    background-color: $fifth-color;
+                    border: 1px solid $secondary-color;
+                }
             }
         }
-        .napis-srodek {
-            font-size: 50px;
-            color: $primary-color;
-            text-transform: uppercase;
-            font-weight: bold;
-            p {
-                margin-bottom: 10px;
-            }
-        }
-        .napis-dol {
-            font-size: 20px;
-            color: $secondary-color;
-            text-transform: uppercase;
-            font-weight: bold;
-            p {
-                margin-top: 10px;
-                margin-bottom: 70px;
-            }
-        }
-        .header-button .button {
-            text-decoration: none;
-            padding: 15px 65px 15px 65px;
-            background-color: $primary-color;
-            font-size: 13px;
-            color: $secondary-color;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-style: none;
-            border-radius: 20px;
-            &:hover {
-                background-color: $fourth-color;
+        .pagedots {
+            text-align: center;
+            .dot {
+                height: 10px;
+                width: 10px;
+                background-color: none;
+                border: 1px solid $primary-color;
+                border-radius: 50%;
+                display: inline-block;
+                margin-top: 170px;
+                &:hover {
+                    background-color: $primary-color;
+                }
             }
         }
     }
-    .pagedots {
-        text-align: center;
-        .dot {
-            height: 10px;
-            width: 10px;
-            background-color: none;
-            border: 1px solid $primary-color;
-            border-radius: 50%;
-            display: inline-block;
-            margin-top: 170px;
-            &:hover {
-                background-color: $primary-color;
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    /* HEADER */
+    header {
+        height: auto;
+        .container {
+            .pasek-gora {
+                height: 400px;
+                .logo {
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                }
+                nav {
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                    padding-top: 30px;
+                    ul {
+                        padding: 0;
+                        li {
+                            display: block;
+                            left: 0;
+                            padding: 8px;
+                            a {
+                                padding: 0 3px 3px 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pagedots {
+            .dot {
+                margin-top: 140px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        height: auto;
+        .container {
+            .pasek-gora {
+                height: 400px;
+                .logo {
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                }
+                nav {
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                    padding-top: 30px;
+                    ul {
+                        padding: 0;
+                        li {
+                            display: block;
+                            left: 0;
+                            padding: 8px;
+                            a {
+                                padding: 0 3px 3px 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .header-text {
+                padding-top: 130px;
+                .napis-gora {
+                    font-size: 30px;
+                }
+                .napis-srodek {
+                    font-size: 30px;
+                }
+            }
+            .pagedots {
+                .dot {
+                    margin-top: 140px;
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -128,6 +221,14 @@ header {
 
 .about {
     margin: 63px 120px 63px 120px;
+    .telephone {
+        position: fixed;
+        left: 90vw;
+        top: 550px;
+        img {
+            border-radius: 50%;
+        }
+    }
     .about-header {
         text-align: center;
         font-size: 28px;
@@ -158,13 +259,36 @@ header {
             border-style: none;
             border-radius: 20px;
             &:hover {
-                background-color: $fourth-color;
+                background-color: $third-color;
             }
         }
     }
     .about-content .picture {
-        width: 445px;
         box-shadow: 0 10px 18px 5px rgba(0, 0, 0, 0.25);
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .about {
+        margin: 63px 20px 63px 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .about {
+        .telephone {
+            left: 80vw;
+            top: 600px;
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        text-align: center;
+        margin: 63px 20px 63px 20px;
     }
 }
 
@@ -216,6 +340,60 @@ header {
             }
             .service-text4 {
                 padding-left: 2px;
+            }
+        }
+    }
+}
+
+@media(min-width: 991px) and (max-width: 1200px) {
+    /* SECTION SERVICES */
+    .services {
+        padding: 63px 0 63px 0;
+        .services-content {
+            display: flex;
+            justify-content: center;
+            .services-border {
+                border: none;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    /* SECTION SERVICES */
+    .services {
+        padding: 63px 164px 63px 164px;
+        .services-content {
+            display: flex;
+            justify-content: center;
+            .services-border {
+                border: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    /* SECTION SERVICES */
+    .services {
+        padding: 63px 100px 63px 100px;
+        .services-content {
+            display: flex;
+            justify-content: center;
+            .services-border {
+                border-left: none;
+            }
+            .service-provide {
+                width: 220px;
+                .service-text1 {
+                    padding-left: 0;
+                }
+                .service-text2 {
+                    padding-left: 0;
+                }
+                .service-text4 {
+                    padding-left: 0;
+                }
             }
         }
     }
@@ -317,7 +495,28 @@ header {
                 border-style: none;
                 border-radius: 20px;
                 &:hover {
-                    background-color: $fourth-color;
+                    background-color: $third-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .projects {
+        padding: 62px 20px 62px 20px;
+        .projects-content {
+            .projects-list {
+                height: auto;
+                width: 115px;
+                ul {
+                    .list-border {
+                        border: none;
+                    }
+                    li {
+                        display: block;
+                        font-size: 9px;
+                    }
                 }
             }
         }
@@ -329,7 +528,9 @@ header {
 .team {
     padding: 62px 120px 62px 120px;
     background-image: url("../images/tlo-team.jpg");
-    height: 700px;
+    height: auto;
+    background-size: cover;
+    width: 100%;
     .team-header {
         text-align: center;
         font-size: 28px;
@@ -350,6 +551,7 @@ header {
         justify-content: space-around;
         margin-top: 42px;
         .member {
+            margin-bottom: 10px;
             height: 430px;
             width: 350px;
             background-color: $secondary-color;
@@ -377,7 +579,7 @@ header {
                     color: $secondary-color;
                     font-size: 16px;
                     &:hover {
-                        background-color: $fourth-color;
+                        background-color: $primary-color;
                     }
                 }
             }
@@ -456,14 +658,31 @@ header {
     }
 }
 
+@media (max-width: 767px) {
+    .clients {
+        padding: 62px 100px 62px 100px;
+    }
+}
+
 /* SECTION LOGOS */
 
 .logos {
-    padding: 62px 120px 62px 120px;
+    margin: 62px 120px 62px 120px;
     .graphics {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around
+    }
+}
+
+@media (max-width: 767px) {
+    .logos {
+        margin: 62px 30px 62px 30px;
+        .graphics {
+            img {
+                padding: 10px;
+            }
+        }
     }
 }
 
@@ -493,6 +712,7 @@ header {
         .card {
             width: 255px;
             height: 340px;
+            margin-bottom: 10px;
             background-color: $secondary-color;
             .head {
                 padding-top: 28px;
@@ -552,7 +772,7 @@ header {
                     border-style: none;
                     border-radius: 20px;
                     &:hover {
-                        background-color: $fourth-color;
+                        background-color: $third-color;
                     }
                 }
             }
@@ -563,7 +783,7 @@ header {
 /* SECTION PREMIUM */
 
 .premium {
-    padding: 62px 160px 62px 160px;
+    margin: 62px 160px 62px 160px;
     .premium-header {
         text-align: center;
         font-size: 28px;
@@ -579,6 +799,12 @@ header {
     }
     .premium-content {
         padding-top: 50px;
+        .book {
+            img {
+                width: 100%;
+                position: relative;
+            }
+        }
         .box-features {
             padding: 10px 0 20px 0;
             .box-head {
@@ -636,9 +862,15 @@ header {
             border-style: none;
             border-radius: 20px;
             &:hover {
-                background-color: $fourth-color;
+                background-color: $third-color;
             }
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .premium {
+        margin: 62px 30px 62px 30px;
     }
 }
 
@@ -697,6 +929,12 @@ header {
     }
 }
 
+@media (max-width: 767px) {
+    .facts {
+        padding: 62px 20px 62px 20px;
+    }
+}
+
 /* SECTION TELL ABOUT US */
 
 .tell {
@@ -749,10 +987,14 @@ header {
             border-radius: 100%;
             color: $secondary-color;
             font-size: 16px;
-            &:hover {
-                background-color: $fourth-color;
-            }
         }
+    }
+}
+
+@media (max-width: 767px) {
+    /* SECTION TELL ABOUT US */
+    .tell {
+        width: 90%;
     }
 }
 
@@ -843,7 +1085,25 @@ header {
             border-style: none;
             border-radius: 20px;
             &:hover {
-                background-color: $fourth-color;
+                background-color: $third-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .contact {
+        padding: 62px 5px 62px 5px;
+        form {
+            width: 80%;
+            .two-form {
+                display: flex;
+                flex-direction: column;
+                .name-email {
+                    input {
+                        width: 95%;
+                    }
+                }
             }
         }
     }
@@ -855,22 +1115,37 @@ header {
     background-image: url("../images/map_obraz_1.jpg");
     position: relative;
     height: 416px;
+    width: 100%;
+    .card-container {
+        .card-adres {
+            margin-top: 40px;
+            margin-left: 10vw;
+            height: 340px;
+            max-width: 540px;
+            width: 100%;
+            background-color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            .adres-content {
+                padding: 50px 0 50px 30px;
+                .adres {
+                    padding: 5px;
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.card-adres {
-    height: 340px;
-    width: 540px;
-    background-color: $secondary-color;
-    margin-top: 35px;
-    margin-left: 245px;
-    display: flex;
-    flex-direction: column;
-    .adres-content {
-        padding: 50px 0 50px 30px;
-        .adres {
-            padding: 5px;
-            span {
-                padding-left: 10px;
+@media (max-width: 767px) {
+    .map {
+        .card-container {
+            display: flex;
+            justify-content: center;
+            .card-adres {
+                margin: 30px 10px 30px 10px;
             }
         }
     }
@@ -880,266 +1155,141 @@ header {
 
 .footer {
     background-color: $fifth-color;
-    padding: 12px 120px 12px 120px;
-    .icons {
-        background-color: #373737;
-        width: 33px;
-        height: 33px;
-        padding: 6px;
-        border-radius: 100%;
-        color: $secondary-color;
-        font-size: 16px;
-        &:hover {
-            background-color: $fourth-color;
+    .cursor {
+        margin-top: -27px;
+        margin-left: 3vw;
+        position: absolute;
+        padding: 5px;
+        img {
+            border-radius: 50%;
+            height: 45px;
+            width: 45px;
         }
     }
-    .napis {
-        padding-top: 135px;
-        color: $secondary-color;
-        font-weight: 600;
-    }
-    .end-text {
-        color: $third-color;
-        font-size: 13px;
-        line-height: 1.5;
-    }
-    .end-form {
-        background-color: #373737;
-        width: 350px;
-        height: 195px;
-        .email {
-            padding-top: 40px;
-            text-align: center;
-            input {
-                width: 60%;
-                background-color: #373737;
-                border-top: none;
-                border-right: none;
-                border-left: none;
-                border-bottom: 1px solid $third-color;
-                margin-bottom: 10px;
-                font-size: 12px;
-                padding-bottom: 5px;
-                color: $third-color;
-            }
-            input::placeholder {
-                text-align: center;
-            }
-        }
-        .end-button {
-            padding-top: 25px;
-            padding-bottom: 50px;
-            text-align: center;
-            input[type="submit"] {
-                text-decoration: none;
-                padding: 15px 60px 15px 60px;
+    .footcontent {
+        margin: 35px 120px 35px 120px;
+        display: flex;
+        .icons {
+            background-color: #373737;
+            width: 33px;
+            height: 33px;
+            padding: 8px;
+            border-radius: 100%;
+            color: $secondary-color;
+            &:hover {
                 background-color: $primary-color;
-                font-size: 13px;
-                color: $secondary-color;
-                font-weight: bold;
-                text-transform: uppercase;
-                border-style: none;
-                border-radius: 20px;
-                &:hover {
-                    background-color: $fourth-color;
+            }
+        }
+        .napis {
+            padding-top: 130px;
+            color: $secondary-color;
+            font-weight: 600;
+        }
+        .end-text {
+            padding: 6px 16px 16px 16px;
+            color: $third-color;
+            font-size: 11px;
+            line-height: 1.9;
+            margin-right: 12px;
+            font-weight: 600;
+        }
+        .end-form {
+            margin-top: 7px;
+            background-color: #373737;
+            max-width: 350px;
+            width: 100%;
+            height: 195px;
+            .email {
+                padding-top: 40px;
+                text-align: center;
+                input {
+                    width: 60%;
+                    background-color: #373737;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    border-bottom: 1px solid $third-color;
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                    padding-bottom: 5px;
+                    color: $third-color;
+                }
+                input::placeholder {
+                    text-align: center;
+                }
+            }
+            .end-button {
+                padding-top: 25px;
+                padding-bottom: 50px;
+                text-align: center;
+                input[type="submit"] {
+                    text-decoration: none;
+                    padding: 15px 60px 15px 60px;
+                    background-color: $primary-color;
+                    font-size: 13px;
+                    color: $secondary-color;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-style: none;
+                    border-radius: 20px;
+                    &:hover {
+                        background-color: $fifth-color;
+                        border: 1px solid $secondary-color;
+                    }
                 }
             }
         }
     }
 }
-@media(min-width: 991px) and (max-width: 1200px) {
-     /* SECTION SERVICES */
 
-     .services {
-        padding: 63px 0 63px 0;
-        .services-content {
-            .services-border {
-                border: none;
-            }
-        }   
-    }
-}    
-@media(min-width: 768px) and (max-width: 991px) {
-    /* HEADER */
-    header {
-        .pasek-gora {
-            .logo {
-                top: 20px;
-                left: 100px;
-                position: absolute;
-            }
+@media(min-width: 991px) and (max-width: 1199px) {
+    .footer {
+        .footcontent {
+            margin: 12px 25px 12px 0;
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
         }
     }
+}
 
-    /* SECTION SERVICES */
-
-    .services {
-        .services-content {
-            .services-border {
-                border: none;
-            }
-            .service-provide {
-                .service-text1 {
-                    padding-left: 0;
-                }
-                .service-text2 {
-                    padding-left: 0;
-                }
-                .service-text4 {
-                    padding-left: 0;
-                }
+@media(min-width: 768px) and (max-width: 991px) {
+    .footer {
+        .footcontent {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin: 12px 25px 12px 0;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 0;
+            .napis {
+                padding-top: 35px;
             }
         }
     }
 }
 
 @media (max-width: 767px) {
-    header {
-        height: 1000px;
-        .pasek-gora {
-            height: 55vh;
-            .logo {
-                left: 60px;
-            }
-            nav {
-                position: absolute;
-                left: 35vw;
-                top: 5vh;
-                ul {
-                    li {
-                        display: block;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        font-size: 11px;
-                        left: 25vw;
-                        padding: 8px;
-                    }
-                }
-            }
-        }
-        .header-text {
-            padding-top: 150px;
-            .napis-gora {
-                font-size: 40px;
-            }
-            .napis-srodek {
-                font-size: 40px;
-            }
-        }
-    }
-    /* SECTION ABOUT US */
-    .about {
-        margin: 63px 20px 63px 20px;
-    }
-    /* SECTION SERVICES */
-    .services {
-        .services-content {
-            .services-border {
-                border-left: none;
-            }
-            .service-provide {
-                width: 220px;
-                .service-text1 {
-                    padding-left: 0;
-                }
-                .service-text2 {
-                    padding-left: 0;
-                }
-                .service-text4 {
-                    padding-left: 0;
-                }
-            }
-        }
-    }
-    /* SECTION PROJECTS */
-    .projects {
-        padding: 62px 20px 62px 20px;
-        .projects-content {
-            .projects-list {
-                height: auto;
-                width: 115px;
-                ul {
-                    .list-border {
-                        border: none;
-                    }
-                    li {
-                        display: block;
-                        font-size: 9px;
-                    }
-                }
-            }
-        }
-    }
-    /* SECTION TEAM */
-    .team {
-        height: auto;
-    }
-    /* SECTION CLIENTS */
-    .clients {
-        padding: 62px 100px 62px 100px;
-    }
-    /* SECTION LOGOS */
-    .logos {
-        padding: 62px 20px 62px 20px;
-        .graphics {
-            img {
-                padding: 10px;
-            }
-        }
-    }
-        /* SECTION PREMIUM */
-        .premium {
-            padding: 62px 40px 62px 40px;
-        }
-    
-    /* SECTION FACTS */
-    .facts {
-        padding: 62px 20px 62px 20px;
-    }
-    /* SECTION TELL ABOUT US */
-    .tell {
-        width: 90%;
-    }
-    /* SECTION CONTACT */
-    .contact {
-        padding: 62px 5px 62px 5px;
-        form {
-            width: 80%;
-        }
-    }
-    /* SECTION MAP */
-    .map {
-        background-image: url("../images/map_obraz_1.jpg");
-        position: relative;
-        height: 416px;
-    }
-    .card-adres {
-        height: 340px;
-        width: 300px;
-        margin-left: 20vw;
-        .adres-ontent {
-            padding: 50px 0 50px 30px;
-            .adres {
-                span {
-                    padding-left: 0px;
-                }
-            }
-        }
-    }
-    /* SECTION FOOTER */
     .footer {
-        padding: 12px 50px 12px 80px;
-        .napis {
-            padding-top: 35px;
-        }
-        .end-form {
-            background-color: #373737;
-            margin-left: 10px;
-            width: 350px;
-            height: 195px;
-            .email {
-                input {
-                    width: 60%;
+        .footcontent {
+            margin: 12px 100px 12px 100px;
+            padding: 30px 50px 30px 50px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            .napis {
+                padding-top: 35px;
+            }
+            .end-form {
+                .email {
+                    input {
+                        width: 60%;
+                    }
                 }
             }
         }
