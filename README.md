@@ -1,1 +1,1 @@
-https://lipieta85.github.io/zad.12.8/
+https://lipieta85.github.io/layout_cut_awax/
